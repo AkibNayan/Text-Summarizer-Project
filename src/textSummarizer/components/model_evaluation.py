@@ -69,7 +69,7 @@ class ModelEvaluation:
         model_pegasus = AutoModelForSeq2SeqLM.from_pretrained(
             self.config.model_path, local_files_only=True).to(device)
 
-        # loading data 
+        # loading data
         dataset_samsum_pt = load_from_disk(self.config.data_path)
 
         rouge_names = ["rouge1", "rouge2", "rougeL", "rougeLsum"]
